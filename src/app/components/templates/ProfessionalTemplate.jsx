@@ -75,7 +75,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
 
         {/* Mobile dropdown */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full dark:bg-gray-300 shadow-md md:hidden">
+          <div className="absolute top-16 left-0 w-full shadow-md md:hidden">
             <ul className="flex flex-col items-center gap-6 py-6 font-semibold">
               {["about", "projects", "contact"].map((id) => (
                 <li
@@ -212,10 +212,10 @@ export default function ProfessionalTemplate({ userData, projects }) {
                 />
               )}
               <div className="p-6">
-                <h3 className="text-xl sm:text-2xl font-semibold mb-2 dark:text-white">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2">
                   {project.title}
                 </h3>
-                <p className=" dark:text-white mb-4 text-sm sm:text-base">
+                <p className=" mb-4 text-sm sm:text-base">
                   {project.description}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
