@@ -518,16 +518,11 @@ export default function Dashboard() {
                   <p className="text-gray-500">Start by adding your first project above!</p>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 overflow-ellipsis gap-6">
                   {projects.map((project) => (
                     <div key={project.id} className="border border-gray-700 p-4 rounded-lg hover:border-gray-600 transition">
                       <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-                      <p className="text-gray-300 mb-3">{project.description}</p>
-                      {project.technologies && (
-                        <p className="text-gray-400 text-sm mb-3">
-                          <strong>Tech:</strong> {project.technologies}
-                        </p>
-                      )}
+                      <p className="text-gray-300 text-wrap mb-3">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-3">
                         {project.liveLink && (
                           <a href={project.liveLink} target="_blank" rel="noopener noreferrer"

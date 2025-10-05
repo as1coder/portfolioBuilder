@@ -8,12 +8,24 @@ export default function ProfessionalTemplate({ userData, projects }) {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+ useEffect(() => {
+    const stored = localStorage.getItem("darkMode");
+    if (stored !== null) {
+      setDarkMode(stored === "true");
+    } else {
+      // Default system preference
+      setDarkMode(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    }
+  }, []);
+
   // Apply dark mode to html root
   useEffect(() => {
+
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("darkMode", "darkMode");
     }
   }, [darkMode]);
 
@@ -25,11 +37,11 @@ export default function ProfessionalTemplate({ userData, projects }) {
   return (
     <div
       className={`transition-colors duration-500 ${
-        darkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+        darkMode ? "bg-gray-900 text-gray-50" : "bg-gray-50 text-gray-900"
       }`}
     >
       {/* Navbar */}
-      <nav className="fixed w-full dark:bg-gray-300 border-b border-white backdrop-blur-md z-50 py-4 px-6 flex justify-between items-center shadow-sm">
+      <nav className="fixed w-full dark:bg-gray-700 border-b border-white backdrop-blur-md z-50 py-4 px-6 flex justify-between items-center shadow-sm">
         <h1
           className="font-bold text-xl sm:text-2xl cursor-pointer hover:text-blue-500 transition"
           onClick={() => scrollToSection("hero")}
