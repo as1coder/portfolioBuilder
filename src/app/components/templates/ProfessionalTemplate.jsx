@@ -41,7 +41,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
       }`}
     >
       {/* Navbar */}
-      <nav className="fixed w-full dark:bg-gray-700 border-b border-white backdrop-blur-md z-50 py-4 px-6 flex justify-between items-center shadow-sm">
+      <nav className="fixed w-full  border-b border-white backdrop-blur-md z-50 py-4 px-6 flex justify-between items-center shadow-sm">
         <h1
           className="font-bold text-xl sm:text-2xl cursor-pointer hover:text-blue-500 transition"
           onClick={() => scrollToSection("hero")}
@@ -122,7 +122,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
           {userData.name}
         </motion.h1>
         <motion.p
-          className="text-base sm:text-lg dark:text-gray-300 max-w-xl mb-6"
+          className="text-base sm:text-lg max-w-xl mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -160,7 +160,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
           About Me
         </motion.h2>
         <motion.p
-          className="text-lg sm:text-xl dark:text-gray-300 max-w-2xl text-center leading-relaxed"
+          className="text-lg sm:text-xl max-w-2xl text-center leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -178,7 +178,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
           {userData.skills.map((skill, idx) => (
             <span
               key={idx}
-              className="bg-blue-100 dark:bg-blue-800 dark:text-white text-blue-800 px-7 py-3 rounded-xl text-center font-bold text-xl shadow hover:shadow-md transition"
+              className="bg-blue-100 text-blue-800 px-7 py-3 rounded-xl text-center font-bold text-xl shadow hover:shadow-md transition"
             >
               {skill}
             </span>
@@ -189,7 +189,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
       {/* Projects */}
       <section
         id="projects"
-        className="py-20 px-6 min-h-screen border-t dark:bg-black"
+        className="py-20 px-6 min-h-screen border-t"
       >
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
           Projects
@@ -198,7 +198,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
-              className="dark:bg-gray-500 border-white border rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group"
+              className=" border-white border rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -234,7 +234,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border border-gray-300 dark:border-gray-700 hover:border-blue-500 px-4 py-2 rounded-lg transition text-center"
+                      className="border border-gray-300 hover:border-blue-500 px-4 py-2 rounded-lg transition text-center"
                     >
                       Code
                     </a>
@@ -252,7 +252,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
         className="py-20 px-6 text-center border-t flex flex-col items-center"
       >
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">Contact Me</h2>
-        <p className="mb-6 max-w-lg  dark:text-gray-300 text-sm sm:text-base">
+        <p className="mb-6 max-w-lg  text-sm sm:text-base">
           Feel free to reach out via email or connect on social platforms.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
