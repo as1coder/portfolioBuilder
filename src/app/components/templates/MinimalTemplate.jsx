@@ -61,7 +61,7 @@ export default function MinimalPortfolio({ userData, projects }) {
         </button>
 
         {menuOpen && (
-          <div className="absolute top-14 left-0 w-full bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 md:hidden">
+          <div className="absolute top-14 left-0 w-full bg-white  border-t border-gray-200  md:hidden">
             <ul className="flex flex-col items-center gap-6 py-6 text-sm">
               {["about", "projects", "contact"].map((id) => (
                 <li

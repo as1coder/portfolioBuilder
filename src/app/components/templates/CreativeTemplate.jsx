@@ -317,7 +317,7 @@ export default function ProfessionalTemplate({ userData, projects }) {
           {/* Mobile menu button */}
           <motion.button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${darkMode ? "hover:bg-gray-800" : "hover:bg-gray-200"
+            className={`md:hidden p-2 rounded-lg transition-colors "
               }`}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
