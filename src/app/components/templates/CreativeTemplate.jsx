@@ -317,8 +317,8 @@ export default function ProfessionalTemplate({ userData, projects }) {
           {/* Mobile menu button */}
           <motion.button
             onClick={() => setMenuOpen(!menuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors "
-              }`}
+            className="md:hidden p-2 rounded-lg bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white shadow-lg transition-all duration-300"
+            whileHover={{ scale: 1.1, boxShadow: "0 0 15px rgba(147, 51, 234, 0.5)" }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
           >
@@ -347,7 +347,6 @@ export default function ProfessionalTemplate({ userData, projects }) {
             </AnimatePresence>
           </motion.button>
         </div>
-
         {/* Enhanced Mobile dropdown */}
         <AnimatePresence>
           {menuOpen && (
