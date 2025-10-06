@@ -394,7 +394,7 @@ export default function Dashboard() {
                     />
                   </div>
                   <div>
-                    <label className='block text-gray-300 mb-2'></label>
+                    <label className='block text-gray-300 mb-2'>Instagram</label>
                     <input
                       type='url'
                       placeholder='https://instagram.com/username'
