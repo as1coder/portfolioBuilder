@@ -433,7 +433,7 @@ export default function Dashboard() {
                     <strong className="text-gray-300">Portfolio URL</strong>
                     <p className="mt-1 truncate">
                       <Link
-                        href={`/${userData.name || user.uid}`}
+                        href={`/${user.uid}`}
                         target="_blank"
                         className="text-blue-400 hover:text-blue-300"
                       >
